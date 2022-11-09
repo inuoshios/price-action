@@ -25,7 +25,7 @@ brews:
     homepage: https://github.com/inuoshios/price-action
     tap:
       owner: inuoshios
-      name: https://github.com/inuoshios/price-action
+      name: homebrew-inuoshios
     commit_author:
       name: inuoshios
       email: inuoshios@gmail.com
