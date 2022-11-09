@@ -4,7 +4,6 @@ Copyright © 2022 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
-	"fmt"
 	"os"
 
 	"github.com/spf13/cobra"
@@ -13,12 +12,10 @@ import (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "price-action",
-	Short: "Price update of cryto and stock market",
-	Long: `A price update of different crypto currencies
-and different coins`,
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Price Action")
-	},
+	Short: "Real time update of cryto and stock market",
+	// Run: func(cmd *cobra.Command, args []string) {
+
+	// },
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
