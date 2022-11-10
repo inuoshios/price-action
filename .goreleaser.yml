@@ -1,5 +1,5 @@
 builds:
-  - binary: price-action
+  - binary: price
     goos:
       - darwin
       - linux
@@ -21,7 +21,7 @@ universal_binaries:
 
 brews:
   - 
-    name: price-action
+    name: price
     homepage: https://github.com/inuoshios/price-action
     tap:
       owner: inuoshios
@@ -31,6 +31,6 @@ brews:
       email: inuoshios@gmail.com
 
 checksum:
-  name_template: 'price-actions_v1_checksums.txt'
+  name_template: 'price_v1_checksums.txt'
 
   
