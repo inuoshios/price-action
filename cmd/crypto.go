@@ -51,9 +51,9 @@ type CoinDetails struct {
 // cryptoCmd represents the crypto command
 var cryptoCmd = &cobra.Command{
 	Use:     "crypto",
-	Aliases: []string{"ct"},
+	Aliases: []string{"c"},
 	Short:   "gives you information on real-time crypto prices 🚀",
-	Run: func(cmd *cobra.Command, args []string) {
+	Run: func(_ *cobra.Command, _ []string) {
 		coinDetails, err := GetCryptoData()
 		if err != nil {
 			fmt.Printf("%v", err)

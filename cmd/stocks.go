@@ -13,9 +13,10 @@ import (
 var stocksCmd = &cobra.Command{
 	Use:     "stocks",
 	Short:   "WIP - Coming soon...",
-	Aliases: []string{"stks"},
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Coming soon...")
+	Aliases: []string{"s"},
+	Run: func(_ *cobra.Command, _ []string) {
+		fmt.Println(green("WIP - Coming soon..."))
+		fmt.Println(red("Dev is Cooking... 🧑‍🍳"))
 	},
 }
 

@@ -1,11 +1,18 @@
+project_name: price
+
+before:
+  hooks:
+    - go mod tidy
+    - go mod download
+
 builds:
   - binary: price
     goos:
       - darwin
       - linux
       - windows
-      - freebsd
     goarch:
+      - 386
       - amd64
       - arm64
     env:
@@ -19,10 +26,34 @@ release:
 universal_binaries:
   - replace: true
 
+archives:
+  - format: tar.gz
+    format_overrides:
+      - goos: windows
+        format: zip
+    name_template: "{{.ProjectName}}_{{.Version}}_{{.Os}}-{{.Arch}}"
+    replacements:
+      amd64: 64bit
+      386: 32bit
+      arm: ARM
+      arm64: ARM64
+      darwin: macOS
+      linux: Linux
+      windows: Windows
+
+changelog:
+  use: github
+  sort: asc
+
+  filters:
+    exclude:
+      - '^docs:'
+      - typo
+      - (?i)foo
+
 brews:
-  - 
-    name: price
-    homepage: https://github.com/inuoshios/price-action
+  - name: price
+    homepage: https://github.com/ixxiv/price-action
     tap:
       owner: inuoshios
       name: homebrew-inuoshios
@@ -31,6 +62,4 @@ brews:
       email: inuoshios@gmail.com
 
 checksum:
-  name_template: 'price_v1_checksums.txt'
-
-  
+  name_template: "price_v1_checksums.txt"
