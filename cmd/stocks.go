@@ -6,6 +6,7 @@ package cmd
 import (
 	"fmt"
 
+	"github.com/ixxiv/price-action/utils/theme"
 	"github.com/spf13/cobra"
 )
 
@@ -15,8 +16,8 @@ var stocksCmd = &cobra.Command{
 	Short:   "WIP - Coming soon...",
 	Aliases: []string{"s"},
 	Run: func(_ *cobra.Command, _ []string) {
-		fmt.Println(green("WIP - Coming soon..."))
-		fmt.Println(red("Dev is Cooking... 🧑‍🍳"))
+		fmt.Println(theme.Green("WIP - Coming soon..."))
+		fmt.Println(theme.Red("Dev is Cooking... 🧑‍🍳"))
 	},
 }
 
