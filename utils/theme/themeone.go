@@ -5,10 +5,11 @@ import "fmt"
 const (
 	colorDefault = "\x1b[39m"
 
-	colorRed   = "\x1b[91m"
-	colorGreen = "\x1b[32m"
-	colorBlue  = "\x1b[94m"
-	colorGray  = "\x1b[90m"
+	colorRed    = "\x1b[91m"
+	colorGreen  = "\x1b[92m"
+	colorBlue   = "\x1b[94m"
+	colorGray   = "\x1b[90m"
+	colorYellow = "\x1b[93m"
 )
 
 func Red(s string) string {
@@ -25,4 +26,8 @@ func Blue(s string) string {
 
 func Gray(s string) string {
 	return fmt.Sprintf("%s%s%s", colorGray, s, colorDefault)
+}
+
+func Yellow(s string) string {
+	return fmt.Sprintf("%s%s%s", colorYellow, s, colorDefault)
 }

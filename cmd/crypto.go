@@ -31,9 +31,9 @@ var cryptoCmd = &cobra.Command{
 		for index, rows := range coinDetails {
 			index++
 			table.AddRow(
-				theme.Blue(fmt.Sprintf("%d", index)),
+				theme.Gray(fmt.Sprintf("%d", index)),
 				theme.Blue(rows.Name),
-				theme.Gray(strings.ToUpper(rows.Symbol)),
+				theme.Yellow(strings.ToUpper(rows.Symbol)),
 				theme.Green(fmt.Sprintf("%.2f", rows.Price)),
 				theme.Green(fmt.Sprintf("%.2f", rows.PriceChangePercentage24h)),
 				theme.Red(fmt.Sprintf("%.2f", rows.MarketCapChange24h)),

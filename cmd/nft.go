@@ -6,6 +6,9 @@ package cmd
 import (
 	"fmt"
 
+	"github.com/ixxiv/price-action/utils"
+	"github.com/ixxiv/price-action/utils/theme"
+	"github.com/scylladb/termtables"
 	"github.com/spf13/cobra"
 )
 
@@ -15,7 +18,30 @@ var nftCmd = &cobra.Command{
 	Aliases: []string{"n"},
 	Short:   "A brief description of your command",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("nft called")
+		nftDetails, err := utils.GetNFTData()
+		if err != nil {
+			fmt.Printf("%v", err)
+		}
+
+		table := termtables.CreateTable()
+		table.SetAlign(termtables.AlignCenter, 12)
+
+		table.AddHeaders("Idx", "Slug", "Volume7D", "Sales7D", "VolumeAllTime", "TotalSupply", "MarketCap", "FloorPrice")
+		for index, rows := range nftDetails {
+			index++
+			table.AddRow(
+				theme.Red(fmt.Sprintf("%d", index)),
+				theme.Blue(rows.Slug),
+				theme.Green(fmt.Sprintf("%.2f", rows.Volume7D)),
+				theme.Yellow(fmt.Sprintf("%v", rows.Stats.Sales7D)),
+				theme.Green(fmt.Sprintf("%.2f", rows.Stats.VolumeAllTime)),
+				theme.Green(fmt.Sprintf("%v", rows.Stats.TotalSupply)),
+				theme.Yellow(fmt.Sprintf("%.2f", rows.Stats.MarketCap)),
+				theme.Blue(fmt.Sprintf("%.2f", rows.Stats.FloorPrice)),
+			)
+		}
+
+		fmt.Println(table.Render())
 	},
 }
 
