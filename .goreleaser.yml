@@ -55,10 +55,10 @@ brews:
   - name: price
     homepage: https://github.com/ixxiv/price-action
     tap:
-      owner: inuoshios
-      name: homebrew-inuoshios
+      owner: ixxiv
+      name: homebrew-ixxiv
     commit_author:
-      name: inuoshios
+      name: ixxiv
       email: inuoshios@gmail.com
 
 checksum:
