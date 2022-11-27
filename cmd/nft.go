@@ -8,6 +8,7 @@ import (
 
 	"github.com/ixxiv/price-action/utils"
 	"github.com/ixxiv/price-action/utils/theme"
+	"github.com/mbndr/figlet4go"
 	"github.com/scylladb/termtables"
 	"github.com/spf13/cobra"
 )
@@ -16,8 +17,10 @@ import (
 var nftCmd = &cobra.Command{
 	Use:     "nft",
 	Aliases: []string{"n"},
-	Short:   "A brief description of your command",
+	Short:   theme.Yellow("Generates over a thousand list of NFTs, and it's blazingly fast"),
 	Run: func(cmd *cobra.Command, args []string) {
+		fmt.Println(theme.AsciiRender("NFTs Prices", "larry3d", []figlet4go.Color{figlet4go.ColorYellow, figlet4go.ColorBlue}, figlet4go.Parser{Name: "terminal", NewLine: "\n"}))
+
 		nftDetails, err := utils.GetNFTData()
 		if err != nil {
 			fmt.Printf("%v", err)
@@ -26,7 +29,7 @@ var nftCmd = &cobra.Command{
 		table := termtables.CreateTable()
 		table.SetAlign(termtables.AlignCenter, 12)
 
-		table.AddHeaders("Idx", "Slug", "Volume7D", "Sales7D", "VolumeAllTime", "TotalSupply", "MarketCap", "FloorPrice")
+		table.AddHeaders("Idx", "Project Name", "Volume7D", "Sales7D", "VolumeAllTime", "TotalSupply", "MarketCap", "FloorPrice")
 		for index, rows := range nftDetails {
 			index++
 			table.AddRow(
