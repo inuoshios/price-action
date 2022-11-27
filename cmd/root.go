@@ -6,13 +6,15 @@ package cmd
 import (
 	"os"
 
+	"github.com/ixxiv/price-action/utils/theme"
+	f "github.com/mbndr/figlet4go"
 	"github.com/spf13/cobra"
 )
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "price",
-	Short: "Real time update of cryto and stock market",
+	Short: theme.AsciiRender("Price", "larry3d", []f.Color{f.ColorBlue, f.ColorYellow}, f.Parser{Name: "terminal", NewLine: "\n"}),
 	// Run: func(cmd *cobra.Command, args []string) {
 
 	// },

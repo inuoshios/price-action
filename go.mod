@@ -3,6 +3,7 @@ module github.com/ixxiv/price-action
 go 1.19
 
 require (
+	github.com/mbndr/figlet4go v0.0.0-20190224160619-d6cef5b186ea
 	github.com/scylladb/termtables v1.0.0
 	github.com/spf13/cobra v1.6.1
 )

@@ -13,24 +13,14 @@ import (
 // stocksCmd represents the stocks command
 var stocksCmd = &cobra.Command{
 	Use:     "stocks",
-	Short:   "WIP - Coming soon...",
+	Short:   theme.Yellow("WIP - Coming soon..."),
 	Aliases: []string{"s"},
 	Run: func(_ *cobra.Command, _ []string) {
 		fmt.Println(theme.Green("WIP - Coming soon..."))
-		fmt.Println(theme.Red("Dev is Cooking... 🧑‍🍳"))
+		fmt.Println(theme.Yellow("Dev is Cooking... 🧑‍🍳"))
 	},
 }
 
 func init() {
 	rootCmd.AddCommand(stocksCmd)
-
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// stocksCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
-	// stocksCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }

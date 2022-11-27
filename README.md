@@ -1,8 +1,61 @@
-## Get real-time crypto prices directly from your terminal.
+# Price (WIP)
+
+[![Go Reference](https://pkg.go.dev/badge/github.com/ixxiv/price-action.svg)](https://pkg.go.dev/github.com/ixxiv/price-action)
+[![build](https://github.com/ixxiv/price-action/actions/workflows/release.yml/badge.svg)](https://github.com/ixxiv/price-action/actions/workflows/release.yml)
+
+Price is a CLI application that helps you display real time prices of Crypto/NFTs directly in your terminal.
+
+This project was implemented in Golang using the Cobra Framework
 
 ## Installation
 
-Download the binaries, install and then run on your terminal.
+Download the binary file from [here](https://github.com/ixxiv/price-action/releases)
 
-PRs are also accepted. Thank you.
+### For Windows
 
+- Add the installation folder to your environment variable
+- Open your terminal (Tested on git bash, it works on other windows terminals too)
+- Run the `price` command, it'll generate the list of available commands
+
+```sh
+Available Commands:
+  crypto      Generates real-time information on different crypto prices 🚀
+  nft         Generates over a thousand list of NFTs, and it's blazingly fast
+  stocks      WIP - Coming soon...
+```
+
+The command below will genrate the list of NFTs - you can use both
+
+```sh
+price nft
+```
+
+```sh
+price n
+```
+
+This command will generate the prices of Cryptocurrency
+
+```sh
+price crypto
+```
+
+```sh
+price c
+```
+
+### Preview
+
+Crypto
+![Alt text](/image/crypto.png)
+
+NFTs
+![Alt text](/image/nfts.png)
+
+### Contribution
+
+If you find an issue, or would like to submit an improvement to this project, please submit an issue [here](https://github.com/ixxiv/price-action/issues). If you would like to submit a Pull request, please reference your issue or the issue you intend to fix.
+
+### License
+
+This project is under the MIT License. See the [License](LICENSE) file for the full license text.

@@ -9,6 +9,7 @@ import (
 
 	"github.com/ixxiv/price-action/utils"
 	"github.com/ixxiv/price-action/utils/theme"
+	"github.com/mbndr/figlet4go"
 	"github.com/scylladb/termtables"
 	"github.com/spf13/cobra"
 )
@@ -17,8 +18,10 @@ import (
 var cryptoCmd = &cobra.Command{
 	Use:     "crypto",
 	Aliases: []string{"c"},
-	Short:   "gives you information on real-time crypto prices 🚀",
+	Short:   theme.Yellow("Generates real-time information on different crypto prices 🚀"),
 	Run: func(_ *cobra.Command, _ []string) {
+		fmt.Println(theme.AsciiRender("Crypto Prices", "standard", []figlet4go.Color{figlet4go.ColorYellow, figlet4go.ColorBlue}, figlet4go.Parser{Name: "terminal", NewLine: "\n"}))
+
 		coinDetails, err := utils.GetCryptoData()
 		if err != nil {
 			fmt.Printf("%v", err)
