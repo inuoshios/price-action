@@ -20,7 +20,7 @@ var cryptoCmd = &cobra.Command{
 	Aliases: []string{"c"},
 	Short:   theme.Yellow("Generates real-time information on different crypto prices 🚀"),
 	Run: func(_ *cobra.Command, _ []string) {
-		fmt.Println(theme.AsciiRender("NFTs Prices", "larry3d", []figlet4go.Color{figlet4go.ColorYellow, figlet4go.ColorBlue}, figlet4go.Parser{Name: "terminal", NewLine: "\n"}))
+		fmt.Println(theme.AsciiRender("Crypto Prices", "standard", []figlet4go.Color{figlet4go.ColorYellow, figlet4go.ColorBlue}, figlet4go.Parser{Name: "terminal", NewLine: "\n"}))
 
 		coinDetails, err := utils.GetCryptoData()
 		if err != nil {
