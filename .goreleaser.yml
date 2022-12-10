@@ -51,6 +51,16 @@ changelog:
       - typo
       - (?i)foo
 
+signs:
+  - signature: "price.msi"
+    cmd: ./price
+    args:
+      - "${signature}"
+      - "${artifact}"
+    artifacts: all
+    ids:
+      - "windows"
+
 brews:
   - name: price
     homepage: https://github.com/ixxiv/price-action
