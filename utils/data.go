@@ -35,7 +35,7 @@ func GetNFTData() ([]NftDetails, error) {
 	}
 
 	if err = json.Unmarshal(response, &nftDetails); err != nil {
-		return nil, fmt.Errorf("umarshall errror: %w", err)
+		return nil, fmt.Errorf("%w", err)
 	}
 
 	return nftDetails, nil
@@ -69,9 +69,44 @@ func GetCryptoData() ([]CoinDetails, error) {
 	}
 
 	if err = json.Unmarshal(response, &coinDetails); err != nil {
-		return nil, fmt.Errorf("umarshall errror: %w", err)
+		return nil, fmt.Errorf("%w", err)
 	}
 
 	return coinDetails, nil
 
+}
+
+func GetStocksdata(stockName string) (*StockDetails, error) {
+	client := http.Client{}
+	var stockDetails StockDetails
+
+	// yahooApi := "https://query1.finance.yahoo.com/v8/finance/chart/GME"
+	yahooApi := fmt.Sprintf("https://query1.finance.yahoo.com/v8/finance/chart/%s", stockName)
+
+	req, err := http.NewRequest(http.MethodGet, yahooApi, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error making a request %w", err)
+	}
+
+	res, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error getting a response %w", err)
+	}
+
+	defer func() {
+		if err := res.Body.Close(); err != nil {
+			return
+		}
+	}()
+
+	response, err := io.ReadAll(res.Body)
+	if err != nil {
+		return nil, err
+	}
+
+	if err = json.Unmarshal(response, &stockDetails); err != nil {
+		return nil, fmt.Errorf("%w", err)
+	}
+
+	return &stockDetails, nil
 }

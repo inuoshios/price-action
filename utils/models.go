@@ -18,5 +18,20 @@ type NftDetails struct {
 		TotalSupply   int64   `json:"total_supply"`
 		MarketCap     float64 `json:"market_cap"`
 		FloorPrice    float64 `json:"floor_price"`
-	}
+	} `json:"stats"`
+}
+
+type StockDetails struct {
+	Chart struct {
+		Result []struct {
+			Meta struct {
+				Currency           string  `json:"currency"`
+				Symbol             string  `json:"symbol"`
+				Timezone           string  `json:"timezone"`
+				RegularMarketPrice float64 `json:"regularMarketPrice"`
+				ChartPreviousClose float64 `json:"chartPreviousClose"`
+				PreviousClose      float64 `json:"previousClose"`
+			} `json:"meta"`
+		} `json:"result"`
+	} `json:"chart"`
 }

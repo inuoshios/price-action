@@ -1,2 +1,0 @@
-#!/bin/sh
-echo SIGNED "$2" >"$1"
