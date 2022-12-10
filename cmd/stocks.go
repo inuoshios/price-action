@@ -13,20 +13,17 @@ import (
 	"github.com/spf13/cobra"
 )
 
+var stockName string
+
 // stocksCmd represents the stocks command
 var stocksCmd = &cobra.Command{
 	Use:     "stocks",
-	Short:   theme.Yellow("WIP - Coming soon..."),
+	Short:   theme.Yellow("Generate details of a particular stock price based on the input given to it"),
 	Aliases: []string{"s"},
 	Run: func(cmd *cobra.Command, args []string) {
-		// out, err := exec.Command("stocks", args...).Output()
-		// if err != nil {
-		// 	log.Fatal(err)
-		// }
+		fmt.Println(theme.AsciiRender("Stock Prices", "standard", []figlet4go.Color{figlet4go.ColorYellow, figlet4go.ColorBlue}, figlet4go.Parser{Name: "terminal", NewLine: "\n"}))
 
-		fmt.Println(theme.AsciiRender("Crypto Prices", "standard", []figlet4go.Color{figlet4go.ColorYellow, figlet4go.ColorBlue}, figlet4go.Parser{Name: "terminal", NewLine: "\n"}))
-
-		stockDetails, err := utils.GetStocksdata()
+		stockDetails, err := utils.GetStocksdata(stockName)
 		if err != nil {
 			fmt.Printf("%v", err)
 		}
@@ -53,4 +50,5 @@ var stocksCmd = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(stocksCmd)
+	stocksCmd.Flags().StringVarP(&stockName, "abbreviation", "a", "TSLA", "Get a single stock by passing in the stock Abbrevation as a cmd flag")
 }

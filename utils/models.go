@@ -18,7 +18,7 @@ type NftDetails struct {
 		TotalSupply   int64   `json:"total_supply"`
 		MarketCap     float64 `json:"market_cap"`
 		FloorPrice    float64 `json:"floor_price"`
-	}
+	} `json:"stats"`
 }
 
 type StockDetails struct {

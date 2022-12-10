@@ -76,11 +76,12 @@ func GetCryptoData() ([]CoinDetails, error) {
 
 }
 
-func GetStocksdata() (*StockDetails, error) {
+func GetStocksdata(stockName string) (*StockDetails, error) {
 	client := http.Client{}
 	var stockDetails StockDetails
 
-	yahooApi := "https://query1.finance.yahoo.com/v8/finance/chart/GME"
+	// yahooApi := "https://query1.finance.yahoo.com/v8/finance/chart/GME"
+	yahooApi := fmt.Sprintf("https://query1.finance.yahoo.com/v8/finance/chart/%s", stockName)
 
 	req, err := http.NewRequest(http.MethodGet, yahooApi, nil)
 	if err != nil {
