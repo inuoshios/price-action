@@ -20,8 +20,8 @@ Download the binary file from [here](https://github.com/ixxiv/price-action/relea
 ```sh
 Available Commands:
   crypto      Generates real-time information on different crypto prices 🚀
-  nft         Generates over a thousand list of NFTs, and it's blazingly fast
-  stocks      WIP - Coming soon...
+  nft         Generates over a thousand list of NFTs, and it is blazingly fast
+  stocks      Generate details of a particular stock price based on the input given to it
 ```
 
 The command below will genrate the list of NFTs - you can use both
@@ -44,6 +44,16 @@ price crypto
 price c
 ```
 
+To get the Price of a specific stock on the stock market, the command below can be used to generate it
+
+```sh
+price stocks --abbreviation {stockabbreviation eg: GME TSLA MSFT}
+```
+
+```sh
+price s -a {stockabbreviation eg: GME TSLA MSFT}
+```
+
 ### Preview
 
 Crypto
@@ -51,6 +61,9 @@ Crypto
 
 NFTs
 ![Alt text](/image/nfts.png)
+
+Stocks
+![Alt test](/image/stocks.png)
 
 ### Contribution
 
