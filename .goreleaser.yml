@@ -53,7 +53,7 @@ changelog:
 
 signs:
   - signature: "price.msi"
-    cmd: ./price
+    cmd: price
     args:
       - "${signature}"
       - "${artifact}"
