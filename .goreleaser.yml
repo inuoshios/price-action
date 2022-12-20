@@ -58,7 +58,7 @@ brews:
       owner: rxxcc
       name: homebrew-rxxcc
     commit_author:
-      name: rxxcc
+      name: Inu John
       email: inuoshios@gmail.com
 
 checksum:
