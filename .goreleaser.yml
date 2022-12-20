@@ -55,7 +55,7 @@ brews:
   - name: price
     homepage: https://github.com/rxxcc/price-action
     tap:
-      owner: Inu John
+      owner: rxxcc
       name: homebrew-rxxcc
     commit_author:
       name: rxxcc
