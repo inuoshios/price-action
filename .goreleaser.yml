@@ -53,12 +53,12 @@ changelog:
 
 brews:
   - name: price
-    homepage: https://github.com/ixxiv/price-action
+    homepage: https://github.com/rxxcc/price-action
     tap:
-      owner: ixxiv
-      name: homebrew-ixxiv
+      owner: Inu John
+      name: homebrew-rxxcc
     commit_author:
-      name: ixxiv
+      name: rxxcc
       email: inuoshios@gmail.com
 
 checksum:

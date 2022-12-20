@@ -1,7 +1,7 @@
 # Price (WIP)
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/ixxiv/price-action.svg)](https://pkg.go.dev/github.com/ixxiv/price-action)
-[![build](https://github.com/ixxiv/price-action/actions/workflows/release.yml/badge.svg)](https://github.com/ixxiv/price-action/actions/workflows/release.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/rxxcc/price-action.svg)](https://pkg.go.dev/github.com/rxxcc/price-action)
+[![build](https://github.com/rxxcc/price-action/actions/workflows/release.yml/badge.svg)](https://github.com/rxxcc/price-action/actions/workflows/release.yml)
 
 Price is a CLI application that helps you display real time prices of Crypto/NFTs directly in your terminal.
 
@@ -9,7 +9,7 @@ This project was implemented in Golang using the Cobra Framework
 
 ## Installation
 
-Download the binary file from [here](https://github.com/ixxiv/price-action/releases)
+Download the binary file from [here](https://github.com/rxxcc/price-action/releases)
 
 ### For Windows
 
@@ -67,7 +67,7 @@ Stocks
 
 ### Contribution
 
-If you find an issue, or would like to submit an improvement to this project, please submit an issue [here](https://github.com/ixxiv/price-action/issues). If you would like to submit a Pull request, please reference your issue or the issue you intend to fix.
+If you find an issue, or would like to submit an improvement to this project, please submit an issue [here](https://github.com/rxxcc/price-action/issues). If you would like to submit a Pull request, please reference your issue or the issue you intend to fix.
 
 ### License
 
