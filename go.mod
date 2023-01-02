@@ -1,4 +1,4 @@
-module github.com/rxxcc/price-action
+module github.com/inuoshios/price-action
 
 go 1.19
 

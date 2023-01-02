@@ -6,8 +6,8 @@ package cmd
 import (
 	"os"
 
+	"github.com/inuoshios/price-action/utils/theme"
 	f "github.com/mbndr/figlet4go"
-	"github.com/rxxcc/price-action/utils/theme"
 	"github.com/spf13/cobra"
 )
 
