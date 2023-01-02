@@ -6,9 +6,9 @@ package cmd
 import (
 	"fmt"
 
+	"github.com/inuoshios/price-action/utils"
+	"github.com/inuoshios/price-action/utils/theme"
 	"github.com/mbndr/figlet4go"
-	"github.com/rxxcc/price-action/utils"
-	"github.com/rxxcc/price-action/utils/theme"
 	"github.com/scylladb/termtables"
 	"github.com/spf13/cobra"
 )

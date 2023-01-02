@@ -52,10 +52,10 @@ changelog:
 
 brews:
   - name: price
-    homepage: https://github.com/rxxcc/price-action
+    homepage: https://github.com/inuoshios/price-action
     tap:
-      owner: rxxcc
-      name: homebrew-rxxcc
+      owner: inuoshios
+      name: homebrew-inuoshios
     commit_author:
       name: Inu John
       email: inuoshios@gmail.com
