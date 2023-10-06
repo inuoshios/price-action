@@ -54,17 +54,6 @@ price stocks --abbreviation {stockabbreviation eg: GME TSLA MSFT}
 price s -a {stockabbreviation eg: GME TSLA MSFT}
 ```
 
-### Preview
-
-Crypto
-![Alt text](/image/crypto.png)
-
-NFTs
-![Alt text](/image/nfts.png)
-
-Stocks
-![Alt test](/image/stocks.png)
-
 ### Contribution
 
 If you find an issue, or would like to submit an improvement to this project, please submit an issue [here](https://github.com/inuoshios/price-action/issues). If you would like to submit a Pull request, please reference your issue or the issue you intend to fix.
